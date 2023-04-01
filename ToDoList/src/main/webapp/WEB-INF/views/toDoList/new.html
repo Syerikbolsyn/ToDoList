@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>New Task</title>
+</head>
+<body>
+<form th:method="POST" th:action="@{/toDoList}" th:object="${toDo}">
+    <label for="task"> Enter task name</label>
+    <input type="text" th:field = "*{task}" id ="task" />
+    <div style="color:red" th:if="${#fields.hasErrors('task')}" th:errors="*{task}" >Task name error</div>
+    <br/>
+    <label for="disc"> Enter task discription</label>
+    <input type="text" th:field = "*{disc}" id ="disc" />
+    <div style="color:red" th:if="${#fields.hasErrors('disc')}" th:errors="*{disc}" >Task discription error</div>
+    <br/>
+    <label for="stage"> Enter task stage</label>
+    <input type="text" th:field = "*{stage}" id ="stage" />
+    <div style="color:red" th:if="${#fields.hasErrors('stage')}" th:errors="*{stage}" >Task name error</div>
+    <br/>
+    <input type="submit" value="Create!"/>
+</form>
+
+</body>
+</html>
