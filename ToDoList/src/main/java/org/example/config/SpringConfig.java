@@ -60,7 +60,7 @@ public class SpringConfig implements WebMvcConfigurer {
         dataSource.setDriverClassName("org.postgresql.Driver");
         dataSource.setUrl("jdbc:postgresql://localhost:5432/postgres");
         dataSource.setUsername("postgres");
-        dataSource.setPassword("Bolsin002123");
+        dataSource.setPassword("********");
 
         return dataSource;
     }
